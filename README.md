@@ -1,7 +1,7 @@
 
-t Development Process & Technical Design
+# fanbot.me Development Process & Technical Design
 
-# Development Process 
+## Development Process 
 
 This document provides guidance and template material intended to help technical staff team, it is also useful background reading for anyone involved on the development process of our current product, this document will assume you know a thing or two about Lean and/or SCRUM, The less lengthy your sprints are, the faster you can course correct.
 
@@ -47,15 +47,15 @@ Development Process Principles
 
 8. Maintenance & Support
 
-# Development tools and process
+## Development tools and process
 
-## Source Control
+### Source Control
 
 Our source control tool for our development process will be [Github](https://github.com/) so we assume you know git, we will use release automation, and we will set up environments so we can regularly release updates, the benefits of a release process is that it forces us to think in terms of "shipping" this will help us to start planning to releasing stables versions of our application every one or two sprints depending on our development process. So the main goal is release the update of our product  with a single command.
 
 Four our branching model will be using GitFlow is suited to collaboration and scaling the development team, for more information visit this link. [Git Flow Cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/)
 
-## Automated Testing
+### Automated Testing
 
 Mostly of our code will be writing in javascript for automation testing in javascript will be using [Phantom.js](http://phantomjs.org/) this framework is mostly used for front-end testing is easy to run  from a command line so it integrates nicely in our CI system, for our server-side code will be using 
 
@@ -77,21 +77,21 @@ For bug and issue tracking will be using a trello board with the following struc
 
 6. Done
 
-## Continuous Integration
+### Continuous Integration
 
 Unit tests only help if you’re running them. we have  a [Drone.io](https://github.com/drone) server to watch and test our code, Drone is a lightweight, powerful continuous delivery system built on container technology, drone uses a simple yaml configuration file, a superset of docker -compose to defines and execute pipelines inside Docker containers.
 
-## Code Reviews and code Quality
+### Code Reviews and code Quality
 
 We want to make sure that our team members reviews each other’s code this has several significant benefits. First and foremost, it ensures that you’re shipping higher quality code. Second, it serves as an amazing educational opportunity for team members, so for this will be using our source control version Github using the feature of pull request to make code reviews in our development team once every member of the team review the pull request this can be merged on the requested branch
 
-## Release Management and Environments 
+### Release Management and Environments 
 
 Release management include our CI environment and our scripts for releasing new code, so we have multiples environments for that staging and production, a staging environment serves two major purposes. First, it creates a shared environment where our members can test their code against consistent representation of your application; this give us a predictable a reliable version of your application that helps to decrease the "works for me" problem, Second, it creates a production-like environment for testing and features that may work slightly differently in a production or staging setting than they would on local development environment — this helps us detect any issues that might not otherwise be visible until you’ve released your code into production.
 
 Complete Process.
 
-# Our Development Stack
+## Our Development Stack
 
 We will separate our development stack in 4 categories.
 
